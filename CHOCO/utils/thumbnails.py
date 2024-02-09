@@ -76,7 +76,6 @@ async def gen_thumb(videoid, user_id):
         image6 = image4.convert("RGBA")
         Image.alpha_composite(image5, image6).save("cache/temp.png")
         img = Image.open("cache/temp.png")
-      
         try:
             os.remove(f"cache/thumb{videoid}.png")
             os.remove(f"cache/temp.png")
@@ -137,7 +136,6 @@ async def gen_qthumb(videoid, user_id):
         image6 = image4.convert("RGBA")
         Image.alpha_composite(image5, image6).save("cache/temp.png")
         img = Image.open("cache/temp.png")
-      
         try:
             os.remove(f"cache/thumb{videoid}.png")
             os.remove(f"cache/temp.png")
