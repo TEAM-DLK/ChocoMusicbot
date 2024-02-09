@@ -11,7 +11,7 @@ from CHOCO.config import UPSTREAM_REPO, UPSTREAM_BRANCH, GIT_TOKEN, OWNER_ID
 from CHOCO import app
 
 if GIT_TOKEN:
-     UPSTREAM_REPO = 'https://github.com/TEAM-DLK/DLKplayer'
+     UPSTREAM_REPO = 'https://github.com/TEAM-DLK/ChocoMusicbot'
 else:
      UPSTREAM_REPO = UPSTREAM_REPO
 
