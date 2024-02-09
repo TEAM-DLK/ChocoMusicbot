@@ -14,8 +14,6 @@ onoffdb = mongodb.onoffper
 suggdb = mongodb.suggestion
 autoenddb = mongodb.autoend
 
-
-
 loop = {}
 playtype = {}
 playmode = {}
@@ -34,7 +32,6 @@ vlimit = []
 maintenance = []
 suggestion = {}
 autoend = {}
-
 
 
 
@@ -65,7 +62,6 @@ async def autoend_off():
     user = await autoenddb.find_one({"chat_id": chat_id})
     if user:
         return await autoenddb.delete_one({"chat_id": chat_id})
-
 
 
 
