@@ -1,4 +1,3 @@
-
 from CHOCO import config
 from CHOCO.config import PRIVATE_BOT_MODE
 from CHOCO.core.mongo import mongodb
@@ -16,7 +15,7 @@ suggdb = mongodb.suggestion
 autoenddb = mongodb.autoend
 
 
-# Shifting to memory [ mongo sucks often]
+
 loop = {}
 playtype = {}
 playmode = {}
@@ -37,7 +36,6 @@ suggestion = {}
 autoend = {}
 
 
-# Auto End Stream
 
 
 async def is_autoend() -> bool:
@@ -69,7 +67,7 @@ async def autoend_off():
         return await autoenddb.delete_one({"chat_id": chat_id})
 
 
-# SUGGESTION
+
 
 
 async def is_suggestion(chat_id: int) -> bool:
@@ -98,7 +96,7 @@ async def suggestion_off(chat_id: int):
         return await suggdb.insert_one({"chat_id": chat_id})
 
 
-# LOOP PLAY
+
 async def get_loop(chat_id: int) -> int:
     lop = loop.get(chat_id)
     if not lop:
@@ -110,7 +108,7 @@ async def set_loop(chat_id: int, mode: int):
     loop[chat_id] = mode
 
 
-# Channel Play IDS
+
 async def get_cmode(chat_id: int) -> int:
     mode = channelconnect.get(chat_id)
     if not mode:
@@ -129,7 +127,7 @@ async def set_cmode(chat_id: int, mode: int):
     )
 
 
-# PLAY TYPE WHETHER ADMINS ONLY OR EVERYONE
+
 async def get_playtype(chat_id: int) -> str:
     mode = playtype.get(chat_id)
     if not mode:
@@ -149,7 +147,7 @@ async def set_playtype(chat_id: int, mode: str):
     )
 
 
-# play mode whether inline or direct query
+
 async def get_playmode(chat_id: int) -> str:
     mode = playmode.get(chat_id)
     if not mode:
@@ -169,7 +167,7 @@ async def set_playmode(chat_id: int, mode: str):
     )
 
 
-# language
+
 async def get_lang(chat_id: int) -> str:
     mode = langm.get(chat_id)
     if not mode:
@@ -189,7 +187,7 @@ async def set_lang(chat_id: int, lang: str):
     )
 
 
-# Muted
+
 async def is_muted(chat_id: int) -> bool:
     mode = mute.get(chat_id)
     if not mode:
@@ -205,7 +203,7 @@ async def mute_off(chat_id: int):
     mute[chat_id] = False
 
 
-# Pause-Skip
+
 async def is_music_playing(chat_id: int) -> bool:
     mode = pause.get(chat_id)
     if not mode:
@@ -221,7 +219,6 @@ async def music_off(chat_id: int):
     pause[chat_id] = False
 
 
-# Active Voice Chats
 async def get_active_chats() -> list:
     return active
 
@@ -243,7 +240,7 @@ async def remove_active_chat(chat_id: int):
         active.remove(chat_id)
 
 
-# Active Video Chats
+
 async def get_active_video_chats() -> list:
     return activevideo
 
@@ -265,7 +262,6 @@ async def remove_active_video_chat(chat_id: int):
         activevideo.remove(chat_id)
 
 
-# Delete command mode
 async def is_commanddelete_on(chat_id: int) -> bool:
     if chat_id not in command:
         return True
@@ -285,7 +281,7 @@ async def commanddelete_on(chat_id: int):
         pass
 
 
-# Clean Mode
+
 async def is_cleanmode_on(chat_id: int) -> bool:
     if chat_id not in cleanmode:
         return True
@@ -305,7 +301,7 @@ async def cleanmode_on(chat_id: int):
         pass
 
 
-# Non Admin Chat
+
 async def check_nonadmin_chat(chat_id: int) -> bool:
     user = await authdb.find_one({"chat_id": chat_id})
     if not user:
@@ -341,7 +337,7 @@ async def remove_nonadmin_chat(chat_id: int):
     return await authdb.delete_one({"chat_id": chat_id})
 
 
-# Video Limit
+
 async def is_video_allowed(chat_idd) -> str:
     chat_id = 123456
     if not vlimit:
@@ -387,7 +383,7 @@ async def set_video_limit(limt: int):
     )
 
 
-# On Off
+
 async def is_on_off(on_off: int) -> bool:
     onoff = await onoffdb.find_one({"on_off": on_off})
     if not onoff:
@@ -409,7 +405,7 @@ async def add_off(on_off: int):
     return await onoffdb.delete_one({"on_off": on_off})
 
 
-# Maintenance
+
 
 
 async def is_maintenance():
@@ -448,7 +444,7 @@ async def maintenance_on():
     return await onoffdb.insert_one({"on_off": 1})
 
 
-# Audio Video Limit
+
 
 from pytgcalls.types.input_stream.quality import (HighQualityAudio, HighQualityVideo, LowQualityAudio, LowQualityVideo, MediumQualityAudio, MediumQualityVideo)
 
