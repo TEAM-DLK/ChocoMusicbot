@@ -12,7 +12,6 @@ from pytgcalls.types import Update
 from pytgcalls.types import MediaStream
 from pytgcalls.types import AudioParameters, AudioQuality, VideoParameters, VideoQuality
 from pytgcalls.types.stream import StreamAudioEnded
-from pytgcalls.types.input_stream.quality import HighQualityAudio
 
 from CHOCO import config
 from CHOCO import LOGGER, YouTube, app
