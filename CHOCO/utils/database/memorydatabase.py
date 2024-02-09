@@ -2,7 +2,6 @@
 from CHOCO import config
 from CHOCO.config import PRIVATE_BOT_MODE
 from CHOCO.core.mongo import mongodb
-from pytgcalls.types.input_stream.quality import HighQualityAudio
 
 channeldb = mongodb.cplaymode
 commanddb = mongodb.commands
@@ -451,12 +450,7 @@ async def maintenance_on():
 
 # Audio Video Limit
 
-from pytgcalls.types.input_stream.quality import (HighQualityAudio,
-                                                  HighQualityVideo,
-                                                  LowQualityAudio,
-                                                  LowQualityVideo,
-                                                  MediumQualityAudio,
-                                                  MediumQualityVideo)
+from pytgcalls.types.input_stream.quality import (HighQualityAudio, HighQualityVideo, LowQualityAudio, LowQualityVideo, MediumQualityAudio, MediumQualityVideo)
 
 
 async def save_audio_bitrate(chat_id: int, bitrate: str):
