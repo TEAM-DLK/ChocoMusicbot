@@ -440,7 +440,7 @@ async def maintenance_on():
         return
     return await onoffdb.insert_one({"on_off": 1})
 
-from from pytgcalls.types import (HighQualityAudio,
+from pytgcalls.types.input_stream.quality import (HighQualityAudio,
                                                   HighQualityVideo,
                                                   LowQualityAudio,
                                                   LowQualityVideo,
