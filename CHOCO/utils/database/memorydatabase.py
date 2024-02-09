@@ -2,6 +2,7 @@
 from CHOCO import config
 from CHOCO.config import PRIVATE_BOT_MODE
 from CHOCO.core.mongo import mongodb
+from pytgcalls.types.input_stream.quality import HighQualityAudio
 
 channeldb = mongodb.cplaymode
 commanddb = mongodb.commands
