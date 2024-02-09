@@ -11,7 +11,7 @@ if os.path.exists("Internal"):
 
 API_ID = int(getenv("API_ID", "11447635"))
 API_HASH = getenv("API_HASH", "fd48e41738daae23b21d25610448da3c")
-BOT_TOKEN = getenv("BOT_TOKEN", "6235424377:AAFVqAmfTPcC8iUTL8xxsbFpom9yosxKwWg")
+BOT_TOKEN = getenv("BOT_TOKEN", "")
 COMMAND_PREFIXES = list(getenv("COMMAND_PREFIXES", "/ ! .").split())
 MONGO_DB_URI = getenv("MONGO_DB_URI", None)
 LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", "-1001936570093"))
@@ -21,7 +21,7 @@ HEROKU_API_KEY = getenv("HEROKU_API_KEY", None)
 HEROKU_APP_NAME = getenv("HEROKU_APP_NAME", None)
 UPSTREAM_REPO = getenv("UPSTREAM_REPO", "https://github.com/TEAM-DLK/ChocoMusicbot")
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "CHOCO")
-GIT_TOKEN = getenv("GIT_TOKEN", "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")
+GIT_TOKEN = getenv("GIT_TOKEN", "")
 SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/DOOZY_OFF")
 SUPPORT_GROUP = getenv("SUPPORT_GROUP", "https://t.me/DOOZY_OFF_TOPIC")
 SUPPORT_HEHE = SUPPORT_GROUP.split("me/")[1]
