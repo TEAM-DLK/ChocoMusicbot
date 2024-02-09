@@ -1,0 +1,75 @@
+{
+    "name": "DLKcho",
+    "description": "ᴀ ᴛᴇʟᴇɢʀᴀᴍ ᴍᴜꜱɪᴄ ᴘʟᴀʏᴇʀ ʙᴏᴛ, ᴡʀɪᴛᴛᴇɴ ɪɴ ᴘʏᴛʜᴏɴ ᴡɪᴛʜ ᴘʏʀᴏɢʀᴀᴍ ᴀɴᴅ ᴘʏ-ᴛɢᴄᴀʟʟꜱ.",
+    "repository": "https://github.com/CHOCOHalderNew/DLKplayer",
+    "logo": "https://telegra.ph/file/4d7a997a6c8c4eb406829.jpg",
+    "keywords": [
+    "python3",
+    "telegram",
+    "bot",
+    "CHOCO",
+    "MusicBot",
+    "telegram-bot",
+    "pyrogram"
+    ],
+    "stack": "container",
+    "env": {
+      "API_ID": {
+        "description": "Get this value from https://my.telegram.org",
+        "value": "11447635",
+        "required": true
+      },
+      "API_HASH": {
+        "description": "Get this value from https://my.telegram.org",
+        "value": "fd48e41738daae23b21d25610448da3c",
+        "required": true
+      },
+      "BOT_TOKEN": {
+        "description": "Put Your Bot token from Botfather",
+        "value": "6235424377:AAHB0fmLR9LNzFIE6jrs4L4BGOxX81C0aUc",
+        "required": true
+      },
+      "MONGO_DB_URI": {
+        "description": "Get a mongodb url from https://cloud.mongodb.com. Below MONGOdb only for Test Don't Use Otherwise Your Bot Hack By Any Hacker",
+        "value": "mongodb+srv://eedc7765a8f3b8:Eu2c8Or3jMbWEVmh@cluster0.16pywx9.mongodb.net/?retryWrites=true&w=majority",
+        "required": true
+      },
+      "MUSIC_BOT_NAME": {
+        "description": "A name for your Music Bot. You can use special characters",
+        "value": "•🄲🄷🄾🄲🄾•",
+        "required": true
+      },
+      "OWNER_ID": {
+        "description": "The user id(s) of user(s) whom you would like to add as a OWNER. Multiple values shall be seperated with a space.",
+        "value": "5917900136",
+        "required": true
+      },
+      "STRING_SESSION": {
+        "description": "A Pyrogram String Session. One Assistant is Compulsory.",
+        "value": "BQCVCenp7_xaXAW5kCI9aTG1uAEo8PgWi0rNjTiVaxwA0gMmJyFQDrzObFz2vq1LGA8EOgB9CCypHo_pu6GrLlykSjbAROJDWBh_49DfD0RhB7zJv23s7uheqeO1SN7ECmdr7h3hQAz7EGDUST_4RlhTLs2_q_hOnu1bj5uvaxwzR1mu7Si8SxUNCj-M3D_hfWIBnge26RVOHO-mhag68_ASGtXXuuz_h6wgMzA9QFKm9f9Yk-o75r5Vx8bdCc4aDk6khcXsxENyMautOQjpYkz_lZOgAGWRyGP7X1YP7b1J0k9kHH4EevpWl32JGUYAcewP1YXfZNxGrqkNAV7UJHclAAAAAXzpucQA",
+        "required": true
+      },
+      "LOG_GROUP_ID": {
+        "description": "Your Log Group ID, add your bot and promote as an admin with full rights !",
+        "value": "-1001936570093",
+        "required": true
+      }
+    },
+    "buildpacks": [
+          {
+              "url": "heroku/python"
+          },
+          {
+              "url": "heroku/nodejs"
+          },
+          {
+              "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+          }
+      ],
+      "formation": {
+          "worker": {
+              "quantity": 1,
+              "size": "basic"
+          }
+      }
+ }
