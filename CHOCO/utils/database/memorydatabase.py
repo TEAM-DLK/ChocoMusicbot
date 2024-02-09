@@ -440,16 +440,12 @@ async def maintenance_on():
         return
     return await onoffdb.insert_one({"on_off": 1})
 
-
-
-
 from pytgcalls.types.input_stream.quality import (HighQualityAudio,
                                                   HighQualityVideo,
                                                   LowQualityAudio,
                                                   LowQualityVideo,
                                                   MediumQualityAudio,
                                                   MediumQualityVideo)
-
 
 async def save_audio_bitrate(chat_id: int, bitrate: str):
     audio[chat_id] = bitrate
