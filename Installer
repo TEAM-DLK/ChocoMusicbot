@@ -15,7 +15,7 @@ psutil
 py-tgcalls==0.8.6
 ntgcalls
 pykeyboard
-pyrogram==2.0.106
+pyrogram==1.4.16
 python-dotenv
 pyyaml
 requests
